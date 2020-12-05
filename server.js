@@ -4,6 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const { getClients, getClientWithID, addNewClient, deleteClient } = require("./handlers/clientHandlers")
+const { getWordWithID, getRandomWord, guessLetter } = require("./handlers/hangmanHandlers");
+
 
 express()
   .use(function (req, res, next) {
@@ -32,5 +34,14 @@ express()
 
   //endPoint to delete client with specific ID
   .delete('/clients/client/:id', deleteClient)
+
+  //endPoint to access to client with specific ID
+  .get('/hangman/word/:id', getWordWithID)
+
+   //endPoint to access to random word
+  .get('/hangman/word', getRandomWord)
+
+   //endPoint to access to random word
+  .get('/hangman/guess/:id/:letter', guessLetter)
 
   .listen(8000, () => console.log(`Listening on port 8000`));
