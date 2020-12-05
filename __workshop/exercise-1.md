@@ -17,3 +17,26 @@ Write out each endpoint, its method, and brief description of waht it should do.
 _This activity is more about the discussion in how to best organize data endpoints. There will not be any coding._
 
 ## Your Answer
+
+| endpoint           | method | Description                                                             |
+| -------------------| ------ | ------------------------------------------------------------------------|
+| `/stock`           | `GET`  | retreive a list of products in stock                                    |
+
+| `/stock/product_1` | `GET`  | retreive a specific product  with description and quantite in stock     |
+
+| `/stock/product_13`|`DELETE`| Delete the product  from the database                                   |
+
+| `/stock/product_12`| `POST` | Add a new product in the stock with  description and quantite in stock  |
+
+| `/custumers`       | `GET`  | retreive a list of custumers in the database                            |
+
+| `/custumers/1`     |  `POST`|   Add a new custumer to the databas                                     |       
+
+| `/custumers/12`    | `PATCH`|  Update certains iformations of the custumer in the databas             |
+
+| `/custumers/1`     |`DELETE`|   Remove a custumer from the databas                                    |    
+
+| `/seating`         | `GET`  | retreive a list of taking/ available in the cafe                        |
+
+| `/seating/s_1`     | `PATCH`| Update status of the seat                                               |
+
